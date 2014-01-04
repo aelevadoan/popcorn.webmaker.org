@@ -19,12 +19,16 @@ Marco de eventos (event framework) para media HTML5. Usa propiedades, métodos, 
 
 Clonar repositorio en tu máquina o en tu servidor
 
-    $git clone --recursive https://github.com/mozilla/popcorn.webmaker.org.git
-    $cd popcorn.webmaker.org
-    $npm install -- me tira error por ahora
 
 //te pide que lo hagas como root- "sudo"
+//previamente hay que tener "Node" instalado 
+    $sudo apt-get install node
 
+    $sudo git clone --recursive https://github.com/mozilla/popcorn.webmaker.org.git
+    $sudo cd popcorn.webmaker.org
+    $sudo npm install
+
+   
 ## Introducir Popcorn.js en tu web
 
 En el html introduce: 
