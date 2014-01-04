@@ -29,13 +29,13 @@ Clonar repositorio en tu máquina o en tu servidor
 
 En el html introduce: 
 
-   <html>
-     <head>
-       <script src="http://popcornjs.org/code/dist/popcorn-complete.js"></script>
-     </head>
-     <body>
-     </body>
-   </html>
+    <html>
+        <head>
+           <script src="http://popcornjs.org/code/dist/popcorn-complete.js"></script>
+        </head>
+       <body>
+       </body>
+    </html>
 
 //todo el código de Popcorn.js es disponible acá>>> [[http://mozillapopcorn.org/popcornjs/]]
 
@@ -43,20 +43,20 @@ En el html introduce:
 
 En este ejemplo introduciremos un video HTML5. Popcorn.js también anda con Youtube y Vimeo. Retomemos el código anterior: 
 
-
- <html>
-     <head>
-       <script src="http://popcornjs.org/code/dist/popcorn-complete.min.js"></script>
-  </head>
-     <body>
-       <video height="180" width="300" id="ourvideo">
+    <html>
+        <head>
+           <script src="http://popcornjs.org/code/dist/popcorn-complete.js"></script>
+        </head>
+       <body>
+        <video height="180" width="300" id="ourvideo">
          <source src="http://videos.mozilla.org/serv/webmademovies/popcornplug.mp4">
          <source src="http://videos.mozilla.org/serv/webmademovies/popcornplug.ogv">
          <source src="http://videos.mozilla.org/serv/webmademovies/popcornplug.webm">
        </video>
        <div id="footnote"></div>
-     </body>
-   </html>
+       </body>
+    </html>
+
 
 Esto creará un elemento de reproductor de video con una ID de "ourvideo", el cual indicará a Popcorn qué video "controlar".
 
@@ -71,34 +71,38 @@ Además del elemento de video, hay un div con ID "footnote" -usarás esto despu�
 
 Aquì vamos a meter unas cuantas lineas de JavaScript para crear nuestra propia instancia de Popcorn. En este ejemplo, vamos a hacer que aparezca un poco de texto a los 2 segundos de reproducirse el video. 
 
-
-   <html>
-     <head>
-       <script src="http://popcornjs.org/code/dist/popcorn-complete.js"></script>
-       <script>
-         document.addEventListener( "DOMContentLoaded", function() {
- 
-           var popcorn = Popcorn( "#ourvideo" );
- 
+    <html>
+        <head>
+           <script src="http://popcornjs.org/code/dist/popcorn-complete.js"></script>
+           <script>
+            document.addEventListener( "DOMContentLoaded", function() {
+         
+            var popcorn = Popcorn( "#ourvideo" );
+         
            popcorn.footnote({
              start: 2,
              end: 5,
              target: "footnote",
              text: "Pop!"
            });
- 
-         }, false );
-       </script>
-     </head>
-     <body>
-       <video height="180" width="300" id="ourvideo">
+          }, false );
+         </script>
+         
+        </head>
+      
+       <body>
+       
+          <video height="180" width="300" id="ourvideo">
          <source src="http://videos.mozilla.org/serv/webmademovies/popcornplug.mp4">
          <source src="http://videos.mozilla.org/serv/webmademovies/popcornplug.ogv">
          <source src="http://videos.mozilla.org/serv/webmademovies/popcornplug.webm">
        </video>
+      
        <div id="footnote"></div>
-     </body>
-   </html>
+       
+       </body>
+       
+     </html>
 
 Empezarás añadiendo un "event listener" en el documento que ejecutará el código que contiene cuando está preparado para ello. Siguiente: crear una variable "popcorn" cuyo valor es "new Popcorn isntance". El constructor Popcorn requiere al menos un argumento, en este caso el ID "#ourvideo". Esto permite que Popcorn sepa qué video va a controlar/ser controlado por. Una vez creada la instancia, usarás el plugin "footnote" para agregar un poco de texto en un área de la página. En este ejemplo el texto que aparecerá será "Pop!" desde el segundo 2 hasta el segundo 5 del video en el target ID especificado ("footnote").
 
