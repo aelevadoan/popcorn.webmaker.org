@@ -12,6 +12,14 @@ Marco de eventos (event framework) para media HTML5. Usa propiedades, métodos, 
 
 "Butter" es el entorno de desarrollo para escribir proyectos "Popcorn".
 
+#Por qué me interesa Popcorn
+
+para generar proactividad en plataformas de activismo, no un megusta esta acciòn sino que la plataforma brinde herramientas de remezcla/mutaciòn/creaciòn colectiva como Popcorn o como [[https://github.com/b4zz4/cwm-drawtool CWM-Draw Tool]]
+
+Popcorn te permite armar composiciones con material online y remezclar creaciones ya generadas (tiene un boton de remezclar al visualizar la creaciòn)
+
+Ejemplos interesantes
+*http://code.chirls.com/18days/
 
 # Usando Popcorn.js
 
